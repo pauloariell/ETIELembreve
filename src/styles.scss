@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+// $font-stack:    Helvetica, sans-serif;
+
+
+/* or your 'styles.scss' with */
+// @import 'customize-bootstrap.scss';
+
+$theme-colors: (
+  "primary": #e02141,
+  "danger": #ff4136
+);
+
+$enable-gradients: true;
+
+@import "~bootstrap/scss/bootstrap";
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome";
