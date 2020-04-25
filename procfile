@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 web: npm start
+=======
+web ng serve
+>>>>>>> 5a22011c70f453a917dc5bed912b74db86cbfd2b
