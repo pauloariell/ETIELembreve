@@ -1,4 +1,9 @@
-<nav *ngIf="!isEmBreve()" id="navbar" class="navbar navbar-expand-lg fixed-top navbar-transparent" (scroll)="onWindowScroll($event);">
+<nav *ngIf="!isEmBreve()" id="navbar" [ngClass]="[
+    true ? 'navbar' : '',
+    true ? 'navbar-expand-lg' : '',
+    true ? 'fixed-top' : '',
+    home ? 'navbar-transparent' : 'bg-primary'
+  ]" (scroll)="onWindowScroll($event);">
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="#">
@@ -17,8 +22,8 @@
                 <li *ngFor="let menu of menus" class="nav-item">
                     <a class="nav-link" href="{{menu.href}}">{{ menu.title }}</a>
                 </li>
-                
-                
+
+
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
                 </li>

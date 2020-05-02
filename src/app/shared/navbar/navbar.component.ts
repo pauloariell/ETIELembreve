@@ -20,6 +20,7 @@ import { Location, LocationStrategy, PathLocationStrategy, DOCUMENT } from '@ang
 export class NavbarComponent implements OnInit {
   private toggleButton: any;
   private sidebarVisible: boolean;
+  public home: boolean = false;
   public LogoImg = 'assets/img/logo-150x50.png';
 
   public menus = [
@@ -56,18 +57,25 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     const navbar: HTMLElement = this.element.nativeElement;
     this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+    var title = this.location.prepareExternalUrl(this.location.path());
+    if (title === '/home') {
+      this.home = true;
+    }
+    console.log(this.home);
   };
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e: Event) {
-    if (window.pageYOffset > 50) {
-      let element = document.getElementById('navbar');
-      element.classList.add('bg-primary');
-      element.classList.remove('navbar-transparent');
-    } else {
-      let element = document.getElementById('navbar');
-      element.classList.remove('bg-primary');
-      element.classList.add('navbar-transparent');
+    if (this.home){
+      if (window.pageYOffset > 50) {
+        let element = document.getElementById('navbar');
+        element.classList.add('bg-primary');
+        element.classList.remove('navbar-transparent');
+      } else {
+        let element = document.getElementById('navbar');
+        element.classList.remove('bg-primary');
+        element.classList.add('navbar-transparent');
+      }
     }
   };
 
@@ -104,8 +112,8 @@ export class NavbarComponent implements OnInit {
   };
 
   isEmBreve() {
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-    if (titlee === '/embreve') {
+    var title = this.location.prepareExternalUrl(this.location.path());
+    if (title === '/embreve') {
       return true;
     }
     else {

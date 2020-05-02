@@ -12,7 +12,7 @@ import { EmBreveComponent } from './pages/em-breve/em-breve.component';
 
 // { path: '', redirectTo: 'embreve', pathMatch: 'full' },
 const routes: Routes = [
-  { path: '', component: EmBreveComponent },
+  { path: '', redirectTo: 'embreve', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'servicos', component: ServicosComponent },
   { path: 'nossa-historia', component: HistoriaComponent },

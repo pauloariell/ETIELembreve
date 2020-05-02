@@ -1,12 +1,92 @@
-<ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
-  [showNavigationIndicators]="showNavigationIndicators">
-  <ng-template ngbSlide *ngFor="let image of images">
-    <div class="slider">
-      <img [src]="image" alt="Random slide">
+<section id="home">
+  <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
+    [showNavigationIndicators]="showNavigationIndicators" class="carousel-fade">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="slider">
+        <img [src]="image" alt="Random slide">
+      </div>
+      <div class="carousel-caption banner">
+        <h3>Perícias de Engenharia e Avaliações de Imóveis</h3>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</section>
+
+<section class="servicos">
+  <h2>Serviços</h2>
+  <p>Estamos em obras... <img src="assets/img/construction2.gif" alt="" style="width: 100px;"></p>
+</section>
+
+<section class="container my-5 col-xl-12" id="nossa-historia">
+  <h2>Nossa História</h2>
+  <div class="row">
+
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          <h3 class="mb-0">
+            A ETIEL Engenharia
+          </h3>
+        </button>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionSobre">
+        <div class="card-body text-justify">
+          <img src="assets/img/logo-150x50.png" alt="Logo ETIEL Engenharia" class="img-top-left">
+          <p>
+            Fundada em Julho de 2019 na cidade de São Paulo/SP com o propósito de ser um diferencial no mercado da
+            Engenharia Civil,
+            a ETIEL Engenharia possui o desejo de prestar com maestria os melhores serviços de Perícias de Engenharia e
+            Avaliações de Imóveis aos seus clientes.
+            Iniciamos nossas atividades atuando junto a instituições financeiras no segmento de avaliações de imóveis na
+            capital paulistana e com o passar do tempo expandiu-se para outros municípios do estado de SP.
+            Atualmente, atuamos em grande parte do território nacional, afim de sempre disponibilizar o devido apoio aos
+            nossos clientes e parceiros.
+            Mantendo o foco em atualizar-se constantemente com as tendências do mercado, temos como nossos principais
+            destaques s reduções de prazos e melhorias na qualidade dos serviços prestados para nossos clientes.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="carousel-caption">
-      <h3>No mouse navigation</h3>
-      <p>This carousel hides navigation arrows and indicators.</p>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          <h3 class="mb-0">
+            Fundador
+          </h3>
+        </button>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSobre">
+        <div class="card-body text-justify">
+          <img src="assets/img/fundador.png" alt="Logo ETIEL Engenharia" class="img-top-left">
+          <p>
+            Engº Rodrigo Leite especialista em Perícias de Engenharia e Avaliações de Imóveis pela Universidade
+            Presbiteriana Mackenzie em parceria com o IBAPE/SP.
+            Atuante no mercado da construção civil desde 2010 nas áreas de Projetos de estruturas metálicas, Orçamentos
+            de obras, Gerenciamento de obras, Perícias de Engenharia e Avaliações de Imóveis.
+            Desenvolveu sua carreira como Engenheiro Civil nas principais atividades voltadas ao mercado de Perícias e
+            avaliações de imóveis, sendo lembrado por onde passou como um profissional extremamente competente e
+            conhecedor do assunto que o envolve.
+            Durante anos de sua carreira atuou em conjunto com as principais instituições financeiras e incorporadoras
+            do ramo. Ao deparar-se com a possibilidade de empregar tais conquistas profissionais em um novo conceito de
+            empresa de Engenharia, não pensou duas vezes e fundou a ETIEL Engenharia.
+          </p>
+        </div>
+      </div>
     </div>
-  </ng-template>
-</ngb-carousel>
+  </div>
+</section>
+
+<section id="noticias">
+  <h2>Noticias</h2>
+  <p>Estamos em obras... <img src="assets/img/construction2.gif" alt="" style="width: 100px;"></p>
+</section>
+<section id="trabalhe-conosco">
+  <h2>Trabalhe Conosco</h2>
+  <p>Estamos em obras... <img src="assets/img/construction2.gif" alt="" style="width: 100px;"></p>
+</section>
+<section id="contato">
+  <h2>Contato</h2>
+  <p>Estamos em obras... <img src="assets/img/construction2.gif" alt="" style="width: 100px;"></p>
+</section>
