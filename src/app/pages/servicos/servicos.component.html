@@ -1,77 +1,15 @@
 <section class="servicos-area">
   <div class="myContainer">
-    <div class="myCard">
+    <h1>Serviços</h1>
+    <div *ngFor="let servico of servicos" class="myCard">
       <div class="imgBx">
-        <img src="assets/img/card.jpg" alt="">
+        <img src="{{ servico.img }}" alt="{{ servico.titulo }}">
       </div>
       <div class="contentBx">
         <div class="content">
-          <h2>Responsive Card</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ex soluta consequatur minus amet
-            debitis molestias recusandae impedit. Quos amet aut optio? Modi eveniet quae, accusamus autem molestias
-            sint. Perferendis quod consectetur non quisquam quae doloribus tenetur totam, exercitationem quas incidunt
-            beatae, consequatur provident obcaecati, facere officiis. Fuga, voluptatem rem?</p>
-            <a href="#">Read More</a>
-        </div>
-      </div>
-    </div>
-    <div class="myCard">
-      <div class="imgBx">
-        <img src="assets/img/card.jpg" alt="">
-      </div>
-      <div class="contentBx">
-        <div class="content">
-          <h2>Responsive Card</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ex soluta consequatur minus amet
-            debitis molestias recusandae impedit. Quos amet aut optio? Modi eveniet quae, accusamus autem molestias
-            sint. Perferendis quod consectetur non quisquam quae doloribus tenetur totam, exercitationem quas incidunt
-            beatae, consequatur provident obcaecati, facere officiis. Fuga, voluptatem rem?</p>
-            <a href="#">Read More</a>
-        </div>
-      </div>
-    </div>
-    <div class="myCard">
-      <div class="imgBx">
-        <img src="assets/img/card.jpg" alt="">
-      </div>
-      <div class="contentBx">
-        <div class="content">
-          <h2>Responsive Card</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ex soluta consequatur minus amet
-            debitis molestias recusandae impedit. Quos amet aut optio? Modi eveniet quae, accusamus autem molestias
-            sint. Perferendis quod consectetur non quisquam quae doloribus tenetur totam, exercitationem quas incidunt
-            beatae, consequatur provident obcaecati, facere officiis. Fuga, voluptatem rem?</p>
-            <a href="#">Read More</a>
-        </div>
-      </div>
-    </div>
-    <div class="myCard">
-      <div class="imgBx">
-        <img src="assets/img/card.jpg" alt="">
-      </div>
-      <div class="contentBx">
-        <div class="content">
-          <h2>Responsive Card</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ex soluta consequatur minus amet
-            debitis molestias recusandae impedit. Quos amet aut optio? Modi eveniet quae, accusamus autem molestias
-            sint. Perferendis quod consectetur non quisquam quae doloribus tenetur totam, exercitationem quas incidunt
-            beatae, consequatur provident obcaecati, facere officiis. Fuga, voluptatem rem?</p>
-            <a href="#">Read More</a>
-        </div>
-      </div>
-    </div>
-    <div class="myCard">
-      <div class="imgBx">
-        <img src="assets/img/card.jpg" alt="">
-      </div>
-      <div class="contentBx">
-        <div class="content">
-          <h2>Responsive Card</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ex soluta consequatur minus amet
-            debitis molestias recusandae impedit. Quos amet aut optio? Modi eveniet quae, accusamus autem molestias
-            sint. Perferendis quod consectetur non quisquam quae doloribus tenetur totam, exercitationem quas incidunt
-            beatae, consequatur provident obcaecati, facere officiis. Fuga, voluptatem rem?</p>
-            <a href="#">Read More</a>
+          <h2>{{ servico.titulo }}</h2>
+          <p>{{ servico.descricao }}</p>
+          <a href="#">Leia mais</a>
         </div>
       </div>
     </div>
