@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-contato',
+  selector: 'ee-contato',
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.scss']
 })
