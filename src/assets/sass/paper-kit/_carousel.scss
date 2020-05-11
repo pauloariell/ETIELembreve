@@ -1,5 +1,5 @@
 .carousel-control-prev,
-.carousel-control-next{
+.carousel-control-next {
     background-color: $danger-color;
     border-radius: 50%;
     opacity: 1;
@@ -7,15 +7,17 @@
     font-size: 12px;
 
     &:hover,
-    &:focus{
+    &:focus {
         opacity: 1;
         background-color: $danger-states-color;
     }
 }
-.carousel-control-prev-icon{
+
+.carousel-control-prev-icon {
     background-image: none !important;
     margin-top: -5px;
-    &:before{
+
+    &:before {
         color: $white-color;
         font-size: 26px;
         margin: 2px;
@@ -24,10 +26,12 @@
         content: "\f104" !important;
     }
 }
-.carousel-control-next-icon{
+
+.carousel-control-next-icon {
     background-image: none !important;
     margin-top: -5px;
-    &:before{
+
+    &:before {
         color: $white-color;
         font-size: 26px;
         margin: 2px;
@@ -36,74 +40,114 @@
         content: "\f105" !important;
     }
 }
-.carousel-control-prev{
+
+.carousel-control-prev {
     height: 30px;
     top: 48%;
     width: 30px;
     left: 20px;
     opacity: 0;
 }
-.carousel-control-next{
+
+.carousel-control-next {
     height: 30px;
     right: 20px;
     top: 48%;
     width: 30px;
     opacity: 0;
 }
-.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .fa, .carousel-control .fa {
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .fa,
+.carousel-control .fa {
     display: inline-block;
     z-index: 5;
 }
-.carousel-control-prev .fa{
+
+.carousel-control-prev .fa {
     font-size: 26px;
     margin: 2px;
     padding-right: 3px;
 }
-.carousel-control-next .fa{
+
+.carousel-control-next .fa {
     font-size: 26px;
     margin: 2px;
     padding-left: 3px;
 }
-.carousel-control-prev, .carousel-control-next {
+
+.carousel-control-prev,
+.carousel-control-next {
     background-image: none;
 }
 
- .page-carousel{
+.page-carousel {
     border-radius: $border-radius-extreme !important;
     border: none !important;
 }
 
-.carousel-inner{
-    .carousel-item{
-        img{
-            border-radius: $border-radius-extreme;
+.carousel-inner {
+    .carousel-item {
+        img {
+            //border-radius: $border-radius-extreme;
             box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-            height: 400px;
+            height: 100vh;
             width: 100%;
         }
+
+        @include transition(300ms, linear);
     }
 }
 
-.carousel-indicators{
+.carousel-indicators {
     bottom: 0px;
 }
-.carousel-indicators li{
+
+.carousel-indicators li {
     background-color: $white-color;
     border: 0 none;
 }
-.carousel-indicators .active{
+
+.carousel-indicators .active {
     background-color: $danger-color;
 }
-.page-carousel:hover{
+
+.page-carousel:hover {
+
     .carousel-control-prev,
-    .carousel-control-next{
+    .carousel-control-next {
         opacity: 1;
         @include transition(300ms, linear);
 
     }
 }
-ngb-carousel{
-    &:focus{
+
+.carousel-fade {
+    .carousel-item {
+        opacity: 0;
+        transition-property: opacity;
+        transition: opacity 0.5s ease-in;
+        transform: none;
+    }
+
+    .carousel-item.active,
+    .carousel-item-next.carousel-item-left,
+    .carousel-item-prev.carousel-item-right {
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .active.carousel-item-left,
+    .active.carousel-item-right {
+        z-index: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+    }
+}
+
+ngb-carousel {
+    &:focus {
         outline: none !important;
     }
 
